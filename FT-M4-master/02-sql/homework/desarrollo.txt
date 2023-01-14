@@ -1,0 +1,38 @@
+create table Movies
+(
+    id int primary key,
+    name text default null,
+    year int default null,
+    rank real default null
+);
+
+create table Actors
+(
+    id int primary key,
+    first_name text default null,
+    last_name text default null,
+    gender text default null
+);
+
+create table Roles
+(
+    actor_id int,
+    movie_id int,
+    role_name text default null
+);
+
+//////////////////////////////////////////
+
+actors            directors_genres  movies_directors  roles
+directors         movies            movies_genres
+
+((((((((((((((((((((()))))))))))))))))))))
+
+CREATE TABLE IF NOT EXISTS "movies" (
+  "id" int(11) NOT NULL DEFAULT '0',
+  "name" varchar(100) DEFAULT NULL,
+  "year" int(11) DEFAULT NULL,
+  "rank" float DEFAULT NULL,
+  PRIMARY KEY ("id")
+);
+
